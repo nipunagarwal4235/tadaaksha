@@ -1,31 +1,21 @@
 import { FC } from "react";
 import CollectionItem from "./CollectionItem";
-import DisplayOne from "../../assets/display-one.png";
-import DisplayTwo from "../../assets/display-two.png";
-import DisplayThree from "../../assets/display-three.png";
+import VideoOne from "../../assets/video-one.webm";
+import VideoTwo from "../../assets/video-two.webm";
+import VideoThree from "../../assets/video-three.webm";
 
 const collections = [
   {
     id: 1,
-    name: "Ruby Enchantment",
-    description:
-      "Hand-embroidered red organza cape with crystal embellishments",
-    image: DisplayOne,
-    price: "$2,499",
+    video: VideoOne,
   },
   {
     id: 2,
-    name: "Pink Lotus",
-    description: "Structured pink lehenga with traditional fan motifs",
-    image: DisplayTwo,
-    price: "$1,899",
+    video: VideoTwo,
   },
   {
     id: 3,
-    name: "Coral Dream",
-    description: "Contemporary draped ensemble with detailed handwork",
-    image: DisplayThree,
-    price: "$2,199",
+    video: VideoThree,
   },
 ];
 

@@ -11,6 +11,10 @@ const Products: FC = () => {
               SHOP ALL PRODUCTS
             </h2>
           </div>
+          <p className="text-gray-600 text-center max-w-2xl">
+            We would love to be a part of your special day. Visit our studio or
+            get in touch with us to start your bridal journey.
+          </p>
         </div>
         <ProductGrid />
       </div>

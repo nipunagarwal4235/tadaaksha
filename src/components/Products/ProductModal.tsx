@@ -11,42 +11,42 @@ const ProductModal: FC<ProductModalProps> = ({ product, onClose }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80">
-      <div className="relative w-full max-w-4xl">
-        {/* Close Button - Now visible on all screen sizes */}
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4">
+      <div className="relative w-full max-w-4xl bg-white rounded-lg shadow-lg">
+        {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute -top-4 md:-top-12 right-0 p-2 bg-black/50 md:bg-transparent rounded-full md:rounded-none text-white hover:text-gray-300 transition-colors"
+          className="absolute top-4 right-4 p-2 bg-black/50 rounded-full text-white hover:text-gray-300 transition-colors"
           aria-label="Close modal"
         >
           <X className="w-6 h-6" />
         </button>
 
         {/* Main Image */}
-        <div className="aspect-[3/4] bg-white">
+        <div className="w-full aspect-[4/3] bg-gray-100 rounded-t-lg overflow-hidden">
           <img
             src={product.images[currentImageIndex]}
-            alt={`${product.name} - View ${currentImageIndex + 1}`}
-            className="w-full h-full object-cover"
+            alt={`${product.id} - View ${currentImageIndex + 1}`}
+            className="w-full h-full object-contain"
           />
         </div>
 
         {/* Thumbnail Navigation */}
-        <div className="flex gap-2 mt-4 overflow-x-auto pb-2">
+        <div className="flex gap-2 p-4 overflow-x-auto bg-gray-50 rounded-b-lg">
           {product.images.map((image, index) => (
             <button
               key={index}
               onClick={() => setCurrentImageIndex(index)}
-              className={`flex-shrink-0 w-20 h-20 ${
+              className={`flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-md border-2 ${
                 currentImageIndex === index
-                  ? "ring-2 ring-white"
-                  : "opacity-70 hover:opacity-100"
-              } transition-opacity`}
+                  ? "border-black"
+                  : "border-transparent hover:border-gray-300"
+              }`}
             >
               <img
                 src={image}
-                alt={`${product.name} thumbnail ${index + 1}`}
-                className="w-full h-full object-cover"
+                alt={`${product.id} thumbnail ${index + 1}`}
+                className="w-full h-full object-cover rounded-md"
               />
             </button>
           ))}
