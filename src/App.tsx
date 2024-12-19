@@ -4,6 +4,7 @@ import Contact from "./components/Contact/Contact";
 import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
 import Products from "./components/Products/Products";
+import WhatsAppIcon from "./components/WhatsappIcon";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Collection />
         <Products />
         <Contact />
+        <WhatsAppIcon />
       </div>
     </>
   );

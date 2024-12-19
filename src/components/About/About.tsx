@@ -8,7 +8,7 @@ const About: FC = () => {
         <div className="flex flex-col items-center">
           {/* Section Title */}
           <div className="flex items-center gap-2 mb-8">
-            <h2 className="text-4xl font-light tracking-wider text-gray-900">
+            <h2 className="text-4xl font-lunar font-light tracking-wider text-gray-900">
               HOW & ABOUT
             </h2>
           </div>

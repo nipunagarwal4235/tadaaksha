@@ -5,6 +5,7 @@ import { ChevronDown } from "lucide-react";
 import NavLink from "../Navbar/NavLink";
 import MobileMenu from "../Navbar/MobileMenu";
 import Logo from "../../assets/logo.png";
+import HeroImage from "../../assets/hero-image.webp";
 
 const Hero: FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -29,26 +30,21 @@ const Hero: FC = () => {
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 h-16 bg-white z-50 flex gap-48 justify-center items-center overflow-hidden">
-        {/* Logo */}
-        <div className="flex-shrink-0 flex items-center">
-          <img src={Logo} className=" text-purple-600" />
-        </div>
-
         <motion.h2
           style={{ scale: navScale, y: navY, opacity: navOpacity }}
-          className="text-2xl font-bold text-black"
+          className="text-3xl font-lunar font-semibold text-black"
         >
           Tadaaksha
         </motion.h2>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex lg:items-center lg:space-x-4">
+        {/* <div className="hidden lg:flex lg:items-center lg:space-x-4">
           <NavLink href="/jewelry">HOME</NavLink>
           <NavLink href="/gifts">ABOUT</NavLink>
           <NavLink href="/collections">COLLECTION</NavLink>
           <NavLink href="/sale">COUPLE</NavLink>
           <NavLink href="/sale">CONTACT</NavLink>
-        </div>
+        </div> */}
 
         {/* Mobile Menu Button */}
         <MobileMenu isOpen={isOpen} toggleMenu={toggleMenu} />
@@ -97,8 +93,7 @@ const Hero: FC = () => {
         <div
           className="absolute inset-0 w-full h-full"
           style={{
-            backgroundImage:
-              'url("https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?auto=format&fit=crop&q=80")',
+            backgroundImage: `url(${HeroImage})`,
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
@@ -107,7 +102,7 @@ const Hero: FC = () => {
         <div className="sticky top-0 h-screen flex items-start justify-center overflow-hidden pt-8">
           <motion.h1
             style={{ scale, y, opacity }}
-            className="text-9xl tracking-wider font-bold text-white pt-8"
+            className="text-6xl md:text-9xl lg:text-10xl xl:text-11xl tracking-wider font-bold font-lunar text-white pt-8"
           >
             Tadaaksha
           </motion.h1>
