@@ -2,9 +2,7 @@ import { FC, useState } from "react";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import NavLink from "../Navbar/NavLink";
 import MobileMenu from "../Navbar/MobileMenu";
-import Logo from "../../assets/logo.png";
 import HeroImage from "../../assets/hero-image.webp";
 
 const Hero: FC = () => {
